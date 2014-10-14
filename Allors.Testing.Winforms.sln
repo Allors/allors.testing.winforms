@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.Testing.Winforms", "Allors.Testing.Winforms\Allors.Testing.Winforms.csproj", "{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.Testing.Winforms.Tests", "Allors.Testing.Winforms.Tests\Allors.Testing.Winforms.Tests.csproj", "{241EF170-CA3D-4DD2-A794-0C16235F0189}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.Testing.Winforms.Tests.Assembly", "Allors.Testing.Winforms.Tests.Assembly\Allors.Testing.Winforms.Tests.Assembly.csproj", "{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{57970BCE-7CE6-4163-A958-71EB78ED5F88}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{241EF170-CA3D-4DD2-A794-0C16235F0189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{241EF170-CA3D-4DD2-A794-0C16235F0189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{241EF170-CA3D-4DD2-A794-0C16235F0189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{241EF170-CA3D-4DD2-A794-0C16235F0189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Allors.Testing.Winforms\Allors.Testing.Winforms.csproj
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+EndGlobal

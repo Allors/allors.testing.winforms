@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{241EF170-CA3D-4DD2-A794-0C16235F0189}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Allors.Testing.Winforms.Tests</RootNamespace>
+    <AssemblyName>Allors.Testing.Winforms.Tests</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindingNavigatorTest.cs" />
+    <Compile Include="CheckBoxTest.cs" />
+    <Compile Include="CheckedListBoxTest.cs" />
+    <Compile Include="ComboBoxTest.cs" />
+    <Compile Include="ContextMenuStripTest.cs" />
+    <Compile Include="ContextMenuTest.cs" />
+    <Compile Include="DataGridTest.cs" />
+    <Compile Include="DataGridTextBoxTest.cs" />
+    <Compile Include="DataGridViewComboBoxEditingControlTest.cs" />
+    <Compile Include="DataGridViewTest.cs" />
+    <Compile Include="DataGridViewTextBoxEditingControlTest.cs" />
+    <Compile Include="DateTimePickerTest.cs" />
+    <Compile Include="DomainUpDownTest.cs" />
+    <Compile Include="FlowLayoutPanelTest.cs" />
+    <Compile Include="FormTest.cs" />
+    <Compile Include="GroupBoxTest.cs" />
+    <Compile Include="HScrollBarTest.cs" />
+    <Compile Include="LabelTest.cs" />
+    <Compile Include="LinkLabelTest.cs" />
+    <Compile Include="ListBoxTest.cs" />
+    <Compile Include="ListViewTest.cs" />
+    <Compile Include="MaskedTextBoxTest.cs" />
+    <Compile Include="MenuItemTest.cs" />
+    <Compile Include="MenuStripTest.cs" />
+    <Compile Include="MessageBoxTest.cs" />
+    <Compile Include="MonthCalendarTest.cs" />
+    <Compile Include="NumericUpDownTest.cs" />
+    <Compile Include="base\WinformsTest.cs" />
+    <Compile Include="PanelTest.cs" />
+    <Compile Include="PictureBoxTest.cs" />
+    <Compile Include="PrintPreviewControlTest.cs" />
+    <Compile Include="PrintPreviewDialogTest.cs" />
+    <Compile Include="ProgressBarTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyGridTest.cs" />
+    <Compile Include="RadioButtonTest.cs" />
+    <Compile Include="RichTextBoxTest.cs" />
+    <Compile Include="SplitContainerTest.cs" />
+    <Compile Include="SplitterTest.cs" />
+    <Compile Include="StatusBarTest.cs" />
+    <Compile Include="StatusStripTest.cs" />
+    <Compile Include="TabControlTest.cs" />
+    <Compile Include="TableLayoutPanelTest.cs" />
+    <Compile Include="TabPageTest.cs" />
+    <Compile Include="TextBoxTest.cs" />
+    <Compile Include="ToolBarTest.cs" />
+    <Compile Include="ToolStripContainerTest.cs" />
+    <Compile Include="ToolStripContentPanelTest.cs" />
+    <Compile Include="ToolStripDropDownMenuTest.cs" />
+    <Compile Include="ToolStripDropDownTest.cs" />
+    <Compile Include="ToolStripPanelTest.cs" />
+    <Compile Include="ToolStripTest.cs" />
+    <Compile Include="TrackBarTest.cs" />
+    <Compile Include="TreeViewTest.cs" />
+    <Compile Include="VScrollBarTest.cs" />
+    <Compile Include="WebBrowserTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Allors.Testing.Winforms.Tests.Assembly\Allors.Testing.Winforms.Tests.Assembly.csproj">
+      <Project>{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}</Project>
+      <Name>Allors.Testing.Winforms.Tests.Assembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Allors.Testing.Winforms\Allors.Testing.Winforms.csproj">
+      <Project>{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}</Project>
+      <Name>Allors.Testing.Winforms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="BeforeBuild">
+  </Target>
+  <UsingTask TaskName="Substitute" AssemblyFile="bin\debug\Allors.Binary.dll" />
+  <Target Name="AfterBuild">
+    <Substitute Input="bin\debug\Allors.Testing.Winforms.Tests.Assembly.dll" Substitutes="bin\debug\Allors.Testing.Winforms.dll" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>
