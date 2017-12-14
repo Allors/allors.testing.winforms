@@ -17,7 +17,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Domain
+namespace Allors.Immersive.Winforms.Domain
 {
     using System;
     using System.ComponentModel;

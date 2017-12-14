@@ -16,7 +16,7 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Testing.Winforms
+namespace Allors.Immersive.Winforms
 {
     using System;
     using System.Runtime.InteropServices;

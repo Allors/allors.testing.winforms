@@ -17,11 +17,11 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Substitutes
+namespace Allors.Immersive.Winforms.Substitutes
 {
     using System.Windows.Forms;
 
-    using Allors.Testing.Winforms.Domain;
+    using Allors.Immersive.Winforms.Domain;
 
     public partial class CheckedListBox
     {

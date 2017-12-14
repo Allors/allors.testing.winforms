@@ -17,7 +17,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Substitutes
+namespace Allors.Immersive.Winforms.Substitutes
 {
     public partial class MonthCalendar
     {

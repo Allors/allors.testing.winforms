@@ -16,16 +16,16 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Testing.Winforms.Testers
+namespace Allors.Immersive.Winforms.Testers
 {
     using System;
     using System.ComponentModel;
     using System.Windows.Forms;
     using System.Windows.Forms.Design;
 
-    using Allors.Testing.Winforms.Domain;
+    using Allors.Immersive.Winforms.Domain;
 
-    using PropertyGrid = Allors.Testing.Winforms.Substitutes.PropertyGrid;
+    using PropertyGrid = Allors.Immersive.Winforms.Substitutes.PropertyGrid;
 
     public delegate void EditorMockDropDownEventHandler(object sender, EditorMockDropDownEventArgs args);
 

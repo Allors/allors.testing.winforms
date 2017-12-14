@@ -16,13 +16,13 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Testing.Winforms.Substitutes
+namespace Allors.Immersive.Winforms.Substitutes
 {
     using System;
     using System.Windows.Forms;
 
-    using Allors.Binary.Attributes;
-    using Allors.Testing.Winforms.Domain;
+    using global::Immersive;
+    using Allors.Immersive.Winforms.Domain;
 
     [SubstituteClass(typeof (System.Windows.Forms.FolderBrowserDialog))]
     public class FolderBrowserDialog : CommonDialog, ISubstitute

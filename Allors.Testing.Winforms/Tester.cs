@@ -16,9 +16,9 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Testing.Winforms
+namespace Allors.Immersive.Winforms
 {
-    using Allors.Testing.Winforms.Domain;
+    using Allors.Immersive.Winforms.Domain;
 
     public class Tester<T> where T : ISubstitute
     {

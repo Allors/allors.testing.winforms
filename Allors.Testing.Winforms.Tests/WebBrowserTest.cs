@@ -17,7 +17,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Tests
+namespace Allors.Immersive.Winforms.Tests
 {
     using AllorsTestWindowsAssembly;
 

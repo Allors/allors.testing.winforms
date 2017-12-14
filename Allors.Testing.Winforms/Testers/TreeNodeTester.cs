@@ -17,7 +17,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Testers
+namespace Allors.Immersive.Winforms.Testers
 {
     using System;
     using System.Collections.Generic;

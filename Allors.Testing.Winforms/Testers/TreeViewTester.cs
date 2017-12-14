@@ -17,14 +17,14 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Testers
+namespace Allors.Immersive.Winforms.Testers
 {
     using System;
     using System.Windows.Forms;
 
-    using Allors.Testing.Winforms.Domain;
+    using Allors.Immersive.Winforms.Domain;
 
-    using TreeView = Allors.Testing.Winforms.Substitutes.TreeView;
+    using TreeView = Allors.Immersive.Winforms.Substitutes.TreeView;
 
     public class TreeViewTester : Tester<TreeView>
     {

@@ -16,14 +16,14 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Testing.Winforms.Tests
+namespace Allors.Immersive.Winforms.Tests
 {
     using System;
     using System.Windows.Forms;
 
-    using Allors.Testing.Winforms;
-    using Allors.Testing.Winforms.Domain;
-    using Allors.Testing.Winforms.Testers;
+    using Allors.Immersive.Winforms;
+    using Allors.Immersive.Winforms.Domain;
+    using Allors.Immersive.Winforms.Testers;
 
     using AllorsTestWindowsAssembly;
 

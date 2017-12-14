@@ -16,15 +16,15 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Testing.Winforms.Substitutes
+namespace Allors.Immersive.Winforms.Substitutes
 {
     using System;
     using System.ComponentModel;
     using System.Windows.Forms;
     using System.Windows.Forms.Design;
 
-    using Allors.Binary.Attributes;
-    using Allors.Testing.Winforms.Domain;
+    using global::Immersive;
+    using Allors.Immersive.Winforms.Domain;
 
     [SubstituteClass]
     public partial class PropertyGrid : System.Windows.Forms.PropertyGrid, ISubstitute

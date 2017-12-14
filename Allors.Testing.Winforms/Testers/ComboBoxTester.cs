@@ -17,12 +17,12 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Testers
+namespace Allors.Immersive.Winforms.Testers
 {
     using System;
 
-    using Allors.Testing.Winforms.Domain;
-    using Allors.Testing.Winforms.Substitutes;
+    using Allors.Immersive.Winforms.Domain;
+    using Allors.Immersive.Winforms.Substitutes;
 
     public class ComboBoxTester : Tester<ComboBox>
     {

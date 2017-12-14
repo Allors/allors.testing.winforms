@@ -17,14 +17,14 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Tests
+namespace Allors.Immersive.Winforms.Tests
 {
     using System;
     using System.Collections;
     using System.Windows.Forms;
 
-    using Allors.Testing.Winforms;
-    using Allors.Testing.Winforms.Domain;
+    using Allors.Immersive.Winforms.Domain;
+    using Allors.Immersive.Winforms;
 
     using NUnit.Framework;
 

@@ -16,7 +16,7 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Testing.Winforms.Testers
+namespace Allors.Immersive.Winforms.Testers
 {
     using System;
     using System.Collections.Generic;

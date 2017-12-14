@@ -17,7 +17,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms
+namespace Allors.Immersive.Winforms
 {
     public enum TestingWinformsEventKind
     {

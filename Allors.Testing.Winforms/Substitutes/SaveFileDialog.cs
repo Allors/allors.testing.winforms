@@ -16,9 +16,9 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Testing.Winforms.Substitutes
+namespace Allors.Immersive.Winforms.Substitutes
 {
-    using Allors.Binary.Attributes;
+    using global::Immersive;
 
     [SubstituteClass(typeof (System.Windows.Forms.SaveFileDialog))]
     public class SaveFileDialog : FileDialog

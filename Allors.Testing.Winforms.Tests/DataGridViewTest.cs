@@ -17,11 +17,11 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Testing.Winforms.Tests
+namespace Allors.Immersive.Winforms.Tests
 {
     using System.Windows.Forms;
 
-    using Allors.Testing.Winforms.Testers;
+    using Allors.Immersive.Winforms.Testers;
 
     using AllorsTestWindowsAssembly;
 

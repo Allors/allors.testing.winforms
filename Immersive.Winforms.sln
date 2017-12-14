@@ -1,18 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.Testing.Winforms", "Allors.Testing.Winforms\Allors.Testing.Winforms.csproj", "{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immersive.Winforms", "Allors.Testing.Winforms\Immersive.Winforms.csproj", "{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.Testing.Winforms.Tests", "Allors.Testing.Winforms.Tests\Allors.Testing.Winforms.Tests.csproj", "{241EF170-CA3D-4DD2-A794-0C16235F0189}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Allors.Testing.Winforms.Tests\Tests.csproj", "{241EF170-CA3D-4DD2-A794-0C16235F0189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Allors.Testing.Winforms.Tests.Assembly", "Allors.Testing.Winforms.Tests.Assembly\Allors.Testing.Winforms.Tests.Assembly.csproj", "{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{57970BCE-7CE6-4163-A958-71EB78ED5F88}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyToProcess", "Allors.Testing.Winforms.Tests.Assembly\AssemblyToProcess.csproj", "{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {392F2DC4-ACD8-41A5-A468-FF6FE9941EB4}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Allors.Testing.Winforms\Allors.Testing.Winforms.csproj
