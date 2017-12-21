@@ -1,24 +1,18 @@
-@SET PATH=%PATH%;C:\Program Files\MSBuild\12.0\Bin;C:\Program Files (x86)\MSBuild\12.0\Bin;C:\Windows\Microsoft.NET\Framework\v4.0.30319
+@SET PATH=%PATH%;packages\NuGet.CommandLine.4.4.1\tools
 
-@msbuild Allors.Testing.Winforms\Allors.Testing.Winforms.csproj /TARGET:REBUILD /PROPERTY:Configuration=Release
-
-@if NOT ["%errorlevel%"]==["0"] (
-    exit /b %errorlevel%
-)
-
-@rmdir publish /s /q
+@rmdir nugets /s /q
 
 @if NOT ["%errorlevel%"]==["0"] (
     exit /b %errorlevel%
 )
 
-@mkdir publish
+@mkdir nugets
 
 @if NOT ["%errorlevel%"]==["0"] (
     exit /b %errorlevel%
 )
 
-@.nuget\Nuget.exe Pack Allors.Testing.Winforms\Allors.Testing.Winforms.csproj -Build -Symbols -Properties Configuration=Release -OutputDirectory publish
+@nuget.exe Pack Immersive.Winforms\Immersive.Winforms.csproj -Build -Properties Configuration=Release -OutputDirectory nugets
 
 @if NOT ["%errorlevel%"]==["0"] (
     exit /b %errorlevel%

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immersive.Winforms", "Allors.Testing.Winforms\Immersive.Winforms.csproj", "{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyToProcess", "AssemblyToProcess\AssemblyToProcess.csproj", "{0EF5D2C2-F428-4871-ABA1-85A67C97D64E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Allors.Testing.Winforms.Tests\Tests.csproj", "{241EF170-CA3D-4DD2-A794-0C16235F0189}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immersive.Winforms", "Immersive.Winforms\Immersive.Winforms.csproj", "{D86C92F7-EB90-489E-847B-06A36A40F9E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyToProcess", "Allors.Testing.Winforms.Tests.Assembly\AssemblyToProcess.csproj", "{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5F9FFFF3-A596-4D2A-9207-F39A1FD38A5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,29 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EA5D3F8-562B-4C40-8B4E-FF6FEC172B50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{241EF170-CA3D-4DD2-A794-0C16235F0189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{241EF170-CA3D-4DD2-A794-0C16235F0189}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{241EF170-CA3D-4DD2-A794-0C16235F0189}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{241EF170-CA3D-4DD2-A794-0C16235F0189}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ECF3AEE3-5BEA-4936-B85E-6A3955F545DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF5D2C2-F428-4871-ABA1-85A67C97D64E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF5D2C2-F428-4871-ABA1-85A67C97D64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF5D2C2-F428-4871-ABA1-85A67C97D64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF5D2C2-F428-4871-ABA1-85A67C97D64E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D86C92F7-EB90-489E-847B-06A36A40F9E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86C92F7-EB90-489E-847B-06A36A40F9E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86C92F7-EB90-489E-847B-06A36A40F9E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86C92F7-EB90-489E-847B-06A36A40F9E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F9FFFF3-A596-4D2A-9207-F39A1FD38A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F9FFFF3-A596-4D2A-9207-F39A1FD38A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F9FFFF3-A596-4D2A-9207-F39A1FD38A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F9FFFF3-A596-4D2A-9207-F39A1FD38A5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {392F2DC4-ACD8-41A5-A468-FF6FE9941EB4}
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Allors.Testing.Winforms\Allors.Testing.Winforms.csproj
-	EndGlobalSection
-	GlobalSection(TextTemplating) = postSolution
-		TextTemplating = 1
+		SolutionGuid = {65F3CF8E-7BCE-4766-BEC4-CD2E8E877AE5}
 	EndGlobalSection
 EndGlobal
