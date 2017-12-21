@@ -27,7 +27,25 @@ namespace AllorsTestWindowsAssembly
         {
             InitializeComponent();
             propertyGrid1.SelectedObject = new A();
+
+            this.ACollection = new[]
+                                   {
+                                       new A() { FirstX = "A1" }
+                                       , new A() { FirstX = "A2" }
+                                       , new A() { FirstX = "A3" }
+                                   };
+
+            this.comboBox1.DisplayMember = "FirstX";
+            this.comboBox1.DataSource = this.ACollection;
+
+            foreach (var a in ACollection)
+            {
+                this.comboBox2.Items.Add(a.FirstX);
+            }
+            comboBox2.SelectedIndex = 0;
         }
+
+        public A[] ACollection { get; set; }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -95,6 +113,16 @@ Console.WriteLine(dialogForm.GetHashCode());
 Console.WriteLine(1);
             dialogForm.ShowDialog(this);
 Console.WriteLine(2);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.textBox1.Text = ((A)this.comboBox1.SelectedItem).FirstX;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.textBox2.Text = (string)this.comboBox2.SelectedItem;
         }
     }
 }

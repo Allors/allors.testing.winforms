@@ -18,6 +18,10 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Linq;
+
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
 
     using NUnit.Framework;
@@ -33,6 +37,38 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void SelectItem()
+        {
+            var a1 = this.form.ACollection.First();
+            var a3 = this.form.ACollection.Last();
+
+            var comboBox = new ComboBoxTester("comboBox1");
+            Assert.AreEqual(a1, comboBox.Target.SelectedItem);
+
+            comboBox.Select<A>(v => Equals(a3, v));
+            Assert.AreEqual(a3, comboBox.Target.SelectedItem);
+
+            var textBox1 = new TextBoxTester("textBox1");
+            Assert.AreEqual(a3.FirstX, textBox1.Target.Text);
+        }
+
+        [Test]
+        public void SelectText()
+        {
+            var a1 = this.form.ACollection.First();
+            var a3 = this.form.ACollection.Last();
+
+            var comboBox = new ComboBoxTester("comboBox2");
+            Assert.AreEqual(a1.FirstX, comboBox.Target.SelectedItem);
+
+            comboBox.Select<string>(v => Equals(a3.FirstX, v));
+            Assert.AreEqual(a3.FirstX, comboBox.Target.SelectedItem);
+
+            var textBox1 = new TextBoxTester("textBox2");
+            Assert.AreEqual(a3.FirstX, textBox1.Target.Text);
         }
     }
 }

@@ -34,11 +34,11 @@ namespace Allors.Immersive.Winforms.Testers
         {
         }
 
-        public void Select(string selection)
+        public void Select<T>(Predicate<T> predicate)
         {
-            foreach (object item in Target.Items)
+            foreach (T item in Target.Items)
             {
-                if (item.ToString().Equals(selection))
+                if (predicate(item))
                 {
                     Target.SelectedItem = item;
                     return;

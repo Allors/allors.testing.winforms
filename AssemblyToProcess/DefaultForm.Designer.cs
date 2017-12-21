@@ -83,6 +83,8 @@ namespace AllorsTestWindowsAssembly
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.comboBox1 = new Allors.Immersive.Winforms.Substitutes.ComboBox();
+            this.comboBox2 = new Allors.Immersive.Winforms.Substitutes.ComboBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,9 +184,9 @@ namespace AllorsTestWindowsAssembly
             this.treeView1.Size = new System.Drawing.Size(90, 72);
             this.treeView1.TabIndex = 6;
             this.treeView1.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterCollapse);
+            this.treeView1.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterExpand);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView1_MouseDown);
-            this.treeView1.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterExpand);
             // 
             // propertyGrid1
             // 
@@ -196,7 +198,7 @@ namespace AllorsTestWindowsAssembly
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(148, 118);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 24);
             this.button3.TabIndex = 8;
@@ -284,11 +286,31 @@ namespace AllorsTestWindowsAssembly
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(10, 120);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(12, 156);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 11;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 332);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button3);
@@ -333,5 +355,7 @@ namespace AllorsTestWindowsAssembly
         private ToolStripProgressBar toolStripProgressBar1;
         private ToolStripComboBox toolStripComboBox1;
         private Button button4;
+        private Allors.Immersive.Winforms.Substitutes.ComboBox comboBox1;
+        private Allors.Immersive.Winforms.Substitutes.ComboBox comboBox2;
     }
 }
