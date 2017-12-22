@@ -41,8 +41,8 @@ namespace Allors.Immersive.Winforms.Tests
         [Test]
         public void MultipleReference()
         {
-            var textBox1a = new TextBoxTester("textBox1");
-            var textBox1b = new TextBoxTester("textBox1");
+            var textBox1a = new TextBoxTester(this.form.Name, "textBox1");
+            var textBox1b = new TextBoxTester(this.form.Name, "textBox1");
 
 
             textBox1a.Target.Text = "Ok!";
@@ -54,7 +54,7 @@ namespace Allors.Immersive.Winforms.Tests
         [Test]
         public void Read()
         {
-            var textBox1 = new TextBoxTester("textBox1");
+            var textBox1 = new TextBoxTester(this.form.Name, "textBox1");
             var textBox2 = new TextBoxTester("textBox2");
             var button1 = new ButtonTester("button1");
 

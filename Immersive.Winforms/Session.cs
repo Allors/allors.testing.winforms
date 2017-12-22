@@ -64,7 +64,7 @@ namespace Allors.Immersive.Winforms.Domain
             var handle = new Handle(this, substitute);
             this.handles.Add(handle);
 
-//Console.WriteLine("-> " + handle);
+            Console.WriteLine("-> " + handle);
 
             return handle;
         }

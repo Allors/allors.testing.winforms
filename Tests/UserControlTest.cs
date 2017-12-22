@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ComboBoxTest.cs" company="allors bvba">
+// <copyright file="TextBoxTest.cs" company="allors bvba">
 //   Copyright 2008-2014 Allors bvba.
 //   
 //   This program is free software: you can redistribute it and/or modify
@@ -16,10 +16,9 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
+
 namespace Allors.Immersive.Winforms.Tests
 {
-    using System.Linq;
-
     using Allors.Immersive.Winforms.Testers;
 
     using AllorsTestWindowsAssembly;
@@ -27,7 +26,7 @@ namespace Allors.Immersive.Winforms.Tests
     using NUnit.Framework;
 
     [TestFixture]
-    public class ComboBoxTest : WinformsTest
+    public class UserControlTest : WinformsTest
     {
         private DefaultForm form;
 
@@ -40,35 +39,22 @@ namespace Allors.Immersive.Winforms.Tests
         }
 
         [Test]
-        public void SelectItem()
+        public void SameNameOnDifferentParents()
         {
-            var a1 = this.form.ACollection.First();
-            var a3 = this.form.ACollection.Last();
+            var button1 = new ButtonTester("button1");
 
-            var comboBox = new ComboBoxTester("comboBox1");
-            Assert.AreEqual(a1, comboBox.Target.SelectedItem);
+            var defaultUserControl = new UserControlTester("defaultUserControl1");
 
-            comboBox.Select<A>(v => Equals(a3, v));
-            Assert.AreEqual(a3, comboBox.Target.SelectedItem);
+            var textBox1OnForm = new TextBoxTester(this.form.Name, "textBox1");
+            var textBox2OnForm = new TextBoxTester(this.form.Name, "textBox2");
+            var textBox1OnUserControl = new TextBoxTester(defaultUserControl.Target.Name, "textBox1");
 
-            var textBox1 = new TextBoxTester(this.form.Name, "textBox1");
-            Assert.AreEqual(a3.FirstX, textBox1.Target.Text);
-        }
+            textBox1OnForm.Target.Text = "OkForm!";
+            button1.Click();
 
-        [Test]
-        public void SelectText()
-        {
-            var a1 = this.form.ACollection.First();
-            var a3 = this.form.ACollection.Last();
-
-            var comboBox = new ComboBoxTester("comboBox2");
-            Assert.AreEqual(a1.FirstX, comboBox.Target.SelectedItem);
-
-            comboBox.Select<string>(v => Equals(a3.FirstX, v));
-            Assert.AreEqual(a3.FirstX, comboBox.Target.SelectedItem);
-
-            var textBox1 = new TextBoxTester("textBox2");
-            Assert.AreEqual(a3.FirstX, textBox1.Target.Text);
+            Assert.AreEqual("OkForm!", textBox1OnForm.Target.Text);
+            Assert.AreEqual("OkForm!", textBox2OnForm.Target.Text);
+            Assert.AreNotEqual("OkForm!", textBox1OnUserControl.Target.Text);
         }
     }
 }

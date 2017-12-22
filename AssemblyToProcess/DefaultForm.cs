@@ -43,6 +43,9 @@ namespace AllorsTestWindowsAssembly
                 this.comboBox2.Items.Add(a.FirstX);
             }
             comboBox2.SelectedIndex = 0;
+
+            this.comboBox1.SelectedIndexChanged += this.comboBox1_SelectedIndexChanged;
+            this.comboBox2.SelectedIndexChanged += this.comboBox2_SelectedIndexChanged;
         }
 
         public A[] ACollection { get; set; }

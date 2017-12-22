@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="MenuItemTest.cs" company="allors bvba">
+// <copyright file="UserControlTester.cs" company="allors bvba">
 //   Copyright 2008-2014 Allors bvba.
 //   
 //   This program is free software: you can redistribute it and/or modify
@@ -16,38 +16,19 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Immersive.Winforms.Tests
+namespace Allors.Immersive.Winforms.Testers
 {
-    using Allors.Immersive.Winforms.Testers;
+    using Allors.Immersive.Winforms.Domain;
+    using Allors.Immersive.Winforms.Substitutes;
 
-    using AllorsTestWindowsAssembly;
-
-    using NUnit.Framework;
-
-    [TestFixture]
-    public class MenuItemTest : WinformsTest
+    public class UserControlTester : Tester<UserControl>
     {
-        private DefaultForm form;
-
-        [SetUp]
-        public override void SetUp()
+        public UserControlTester(Handle handle) : base(handle)
         {
-            base.SetUp();
-            this.form = new DefaultForm();
-            this.form.Show();
         }
 
-        [Test]
-        public void click()
+        public UserControlTester(params string[] names) : base(names)
         {
-            var treeView = new TreeViewTester("treeView1");
-            treeView.SelectNode(new[]{0});
-
-            var menuItem1 = new MenuItemTester("MenuItem1");
-            menuItem1.Target.PerformClick();
-
-            var textBoxTester = new TextBoxTester(this.form.Name, "textBox1");
-            Assert.AreEqual("MenuItem1", textBoxTester.Target.Text);
         }
     }
 }

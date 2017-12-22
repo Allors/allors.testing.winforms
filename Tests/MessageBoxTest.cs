@@ -55,7 +55,7 @@ namespace Allors.Immersive.Winforms.Tests
         public void Show()
         {
             var button3 = new ButtonTester("button3");
-            var textBox1 = new TextBoxTester("textBox1");
+            var textBox1 = new TextBoxTester(this.form.Name, "textBox1");
 
             dialogResult = DialogResult.OK;
             button3.Click();

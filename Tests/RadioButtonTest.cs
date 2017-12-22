@@ -40,7 +40,7 @@ namespace Allors.Immersive.Winforms.Tests
         [Test]
         public void Read()
         {
-            var textBox1 = new TextBoxTester("textBox1");
+            var textBox1 = new TextBoxTester(this.form.Name, "textBox1");
             var textBox2 = new TextBoxTester("textBox2");
 
             var radioButton1 = new RadioButtonTester("radioButton1");

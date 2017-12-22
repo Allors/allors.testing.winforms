@@ -48,7 +48,7 @@ namespace Allors.Immersive.Winforms.Tests
             Assert.That(node1_2.IsVisible, Is.False);
             treeViewTester.Target.SelectedNode = node1_2;
 
-            var textBoxTester = new TextBoxTester("textBox1");
+            var textBoxTester = new TextBoxTester(this.form.Name, "textBox1");
             Assert.AreEqual("Node1_2", textBoxTester.Target.Text);
             Assert.That(node1_2.IsVisible, Is.True);
         }
@@ -60,7 +60,7 @@ namespace Allors.Immersive.Winforms.Tests
             var node1 = treeViewTester.Target.Nodes.Find("Node1", true)[0];
             treeViewTester.Target.SelectedNode = node1;
 
-            var textBoxTester = new TextBoxTester("textBox1");
+            var textBoxTester = new TextBoxTester(this.form.Name, "textBox1");
             Assert.AreEqual("Node1", textBoxTester.Target.Text);
         }
     }

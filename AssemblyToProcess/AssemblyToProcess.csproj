@@ -60,6 +60,12 @@
     <Compile Include="DefaultForm.Designer.cs">
       <DependentUpon>DefaultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DefaultUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefaultUserControl.Designer.cs">
+      <DependentUpon>DefaultUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DefaultForm.resx">
       <DependentUpon>DefaultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultUserControl.resx">
+      <DependentUpon>DefaultUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogForm.resx">
       <DependentUpon>DialogForm.cs</DependentUpon>
