@@ -177,6 +177,9 @@
     <Compile Include="Substitutes\events\NumericUpDown.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Substitutes\events\ToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Substitutes\events\UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -310,6 +313,9 @@
     <Compile Include="Substitutes\OpenFileDialog.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Substitutes\ToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Substitutes\UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -435,6 +441,7 @@
     <Compile Include="Testers\MonthCalendarTester.cs" />
     <Compile Include="Testers\NumericUpDownTester.cs" />
     <Compile Include="Testers\OpenFileDialogTester.cs" />
+    <Compile Include="Testers\ToolStripButtonTester.cs" />
     <Compile Include="Testers\UserControlTester.cs" />
     <Compile Include="Testers\PanelTester.cs" />
     <Compile Include="Testers\PictureBoxTester.cs" />

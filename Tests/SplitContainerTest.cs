@@ -18,21 +18,33 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
+
+    using AssemblyToProcess;
 
     using NUnit.Framework;
 
     [TestFixture]
     public class SplitContainerTest : WinformsTest
     {
-        private DefaultForm form;
+        private SplitForm form;
 
         [SetUp]
         public override void SetUp()
         {
             base.SetUp();
-            this.form = new DefaultForm();
+            this.form = new SplitForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void Select()
+        {
+            // button1 inside a splitcontainer, inside a groupbox, inside a panel;
+            var button1 = new ButtonTester("button1");
+            button1.Click();
         }
     }
 }

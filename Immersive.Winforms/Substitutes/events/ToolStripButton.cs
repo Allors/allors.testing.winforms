@@ -1,6 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ToolStripButton.cs" company="allors bvba">
+// <copyright file="ToolStripPanel.cs" company="allors bvba">
 //   Copyright 2008-2014 Allors bvba.
 //   
 //   This program is free software: you can redistribute it and/or modify
@@ -19,7 +18,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Substitutes
 {
-    public partial class ToolStripPanel
+    public partial class ToolStripButton
     {
     }
 }

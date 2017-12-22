@@ -53,13 +53,13 @@ namespace AllorsTestWindowsAssembly
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node1_1");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node1_2");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node2");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node1_1");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node1_2");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Node2");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DefaultForm));
             this.contextMenu = new System.Windows.Forms.ContextMenu();
             this.menuItem1 = new System.Windows.Forms.MenuItem();
@@ -109,7 +109,7 @@ namespace AllorsTestWindowsAssembly
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(13, 55);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 0;
@@ -117,7 +117,7 @@ namespace AllorsTestWindowsAssembly
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(13, 112);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 1;
@@ -125,7 +125,7 @@ namespace AllorsTestWindowsAssembly
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(197, 49);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 2;
@@ -136,7 +136,7 @@ namespace AllorsTestWindowsAssembly
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(197, 100);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 3;
@@ -148,7 +148,7 @@ namespace AllorsTestWindowsAssembly
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(337, 57);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(98, 21);
             this.checkBox1.TabIndex = 4;
@@ -159,7 +159,7 @@ namespace AllorsTestWindowsAssembly
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(337, 110);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(110, 21);
             this.radioButton1.TabIndex = 5;
@@ -171,24 +171,24 @@ namespace AllorsTestWindowsAssembly
             // treeView1
             // 
             this.treeView1.Location = new System.Drawing.Point(496, 49);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(4);
             this.treeView1.Name = "treeView1";
-            treeNode6.ContextMenu = this.contextMenu;
-            treeNode6.Name = "Node0";
-            treeNode6.Text = "Node0";
-            treeNode7.Name = "Node1_1";
-            treeNode7.Text = "Node1_1";
-            treeNode8.Name = "Node1_2";
-            treeNode8.Text = "Node1_2";
-            treeNode9.Name = "Node1";
-            treeNode9.Text = "Node1";
-            treeNode9.ToolTipText = "Tooltip voor Node1";
-            treeNode10.Name = "Node2";
-            treeNode10.Text = "Node2";
+            treeNode1.ContextMenu = this.contextMenu;
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Node0";
+            treeNode2.Name = "Node1_1";
+            treeNode2.Text = "Node1_1";
+            treeNode3.Name = "Node1_2";
+            treeNode3.Text = "Node1_2";
+            treeNode4.Name = "Node1";
+            treeNode4.Text = "Node1";
+            treeNode4.ToolTipText = "Tooltip voor Node1";
+            treeNode5.Name = "Node2";
+            treeNode5.Text = "Node2";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode9,
-            treeNode10});
+            treeNode1,
+            treeNode4,
+            treeNode5});
             this.treeView1.Size = new System.Drawing.Size(119, 88);
             this.treeView1.TabIndex = 6;
             this.treeView1.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterCollapse);
@@ -199,7 +199,7 @@ namespace AllorsTestWindowsAssembly
             // propertyGrid1
             // 
             this.propertyGrid1.Location = new System.Drawing.Point(637, 49);
-            this.propertyGrid1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.propertyGrid1.Margin = new System.Windows.Forms.Padding(4);
             this.propertyGrid1.Name = "propertyGrid1";
             this.propertyGrid1.Size = new System.Drawing.Size(227, 350);
             this.propertyGrid1.TabIndex = 7;
@@ -289,7 +289,7 @@ namespace AllorsTestWindowsAssembly
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(197, 192);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 10;
@@ -341,7 +341,7 @@ namespace AllorsTestWindowsAssembly
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DefaultForm";
             this.Text = "DefaultForm";
             this.toolStrip1.ResumeLayout(false);

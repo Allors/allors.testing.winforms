@@ -90,6 +90,7 @@
     <Compile Include="TabControlTest.cs" />
     <Compile Include="TableLayoutPanelTest.cs" />
     <Compile Include="TabPageTest.cs" />
+    <Compile Include="ToolStripButtonTest.cs" />
     <Compile Include="UserControlTest.cs" />
     <Compile Include="TextBoxTest.cs" />
     <Compile Include="ToolBarTest.cs" />

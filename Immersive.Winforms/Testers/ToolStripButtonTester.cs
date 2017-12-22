@@ -1,6 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ToolStripButton.cs" company="allors bvba">
+// <copyright file="ToolStripMenuItemTester.cs" company="allors bvba">
 //   Copyright 2008-2014 Allors bvba.
 //   
 //   This program is free software: you can redistribute it and/or modify
@@ -17,9 +16,27 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-namespace Allors.Immersive.Winforms.Substitutes
+
+namespace Allors.Immersive.Winforms.Testers
 {
-    public partial class ToolStripPanel
+    using Allors.Immersive.Winforms.Domain;
+    using Allors.Immersive.Winforms.Substitutes;
+
+    public class ToolStripButtonTester : Tester<ToolStripButton>
     {
+        public ToolStripButtonTester(Handle handle) : base(handle)
+        {
+        }
+
+        public ToolStripButtonTester(params string[] names)
+            : base(names)
+        {
+        }
+
+        public void Click()
+        {
+            Target.PerformClick();
+        }
+
     }
 }

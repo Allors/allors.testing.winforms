@@ -1,6 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ToolStripButton.cs" company="allors bvba">
+// <copyright file="ToolStripMenuItem.cs" company="allors bvba">
 //   Copyright 2008-2014 Allors bvba.
 //   
 //   This program is free software: you can redistribute it and/or modify
@@ -17,9 +16,25 @@
 //   along with this program.  If not, see http://www.gnu.org/licenses.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
+
 namespace Allors.Immersive.Winforms.Substitutes
 {
-    public partial class ToolStripPanel
+    using global::Immersive;
+    using Allors.Immersive.Winforms.Domain;
+
+    [SubstituteClass]
+    public partial class ToolStripButton : System.Windows.Forms.ToolStripButton, ISubstitute
     {
+        private Handle handle;
+
+        public ToolStripButton()
+        {
+            this.handle = Session.Singleton.Create(this);
+        }
+
+        public string SubstituteName
+        {
+            get { return Name; }
+        }
     }
 }
