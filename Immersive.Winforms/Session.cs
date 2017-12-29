@@ -27,7 +27,7 @@ namespace Allors.Immersive.Winforms.Domain
     {
         public static readonly Session Singleton;
 
-        private readonly List<Handle> handles;
+        public readonly List<Handle> handles;
 
         private TestingWinformsEventHandler testingWinformsEvent;
 
@@ -64,7 +64,7 @@ namespace Allors.Immersive.Winforms.Domain
             var handle = new Handle(this, substitute);
             this.handles.Add(handle);
 
-            Console.WriteLine("-> " + handle);
+            Console.WriteLine(substitute.SubstituteName + "-> " + handle);
 
             return handle;
         }

@@ -19,6 +19,10 @@
 
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Windows.Forms;
+
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
 
     using NUnit.Framework;
@@ -34,6 +38,14 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new VScrollBarTester("vScrollBar1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<VScrollBar>(tester.Target);
         }
     }
 }

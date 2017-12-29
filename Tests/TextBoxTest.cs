@@ -19,6 +19,9 @@
 
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Windows.Forms;
+    using System.Xml.Serialization;
+
     using Allors.Immersive.Winforms.Testers;
 
     using AllorsTestWindowsAssembly;
@@ -36,6 +39,14 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new TextBoxTester(this.form.Name, "textBox1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<TextBox>(tester.Target);
         }
 
         [Test]
@@ -66,6 +77,26 @@ namespace Allors.Immersive.Winforms.Tests
 
             Assert.AreEqual("Ok!", textBox1.Target.Text);
             Assert.AreEqual("Ok!", textBox2.Target.Text);
+        }
+
+        [Test]
+        public void AddTextBox()
+        {
+            // Adds a textbox to the controls collection
+            var button = new ButtonTester("buttonAddTextBox");
+            button.Click();
+
+            var textBox = new TextBoxTester(this.form.Name, "textBoxHelloAllors");
+            Assert.AreEqual(@"I'm added to the controls collection", textBox.Target.Text);
+
+            var panel2 = new PanelTester("panel2");
+            foreach (Control targetControl in panel2.Target.Controls)
+            {
+                if (targetControl is TextBox)
+                {
+                    Assert.AreEqual(@"I'm added to the panels collection", targetControl.Text);
+                }
+            }
         }
     }
 }

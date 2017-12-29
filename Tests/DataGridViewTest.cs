@@ -42,7 +42,15 @@ namespace Allors.Immersive.Winforms.Tests
             this.form = new DataGridViewForm();
             this.form.Show();
         }
-        
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new DataGridViewTester("dataGridView1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<DataGridView>(tester.Target);
+        }
+
         [Test]
         public void GetRowCount()
         {

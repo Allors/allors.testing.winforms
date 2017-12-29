@@ -19,6 +19,7 @@
 namespace Allors.Immersive.Winforms.Tests
 {
     using System.Linq;
+    using System.Windows.Forms;
 
     using Allors.Immersive.Winforms.Testers;
 
@@ -37,6 +38,14 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new ComboBoxTester("comboBox1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<ComboBox>(tester.Target);
         }
 
         [Test]

@@ -18,6 +18,11 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Drawing;
+    using System.Windows.Forms;
+
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
 
     using NUnit.Framework;
@@ -33,6 +38,23 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new PanelTester("panel1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<Panel>(tester.Target);
+        }
+
+        [Test]
+        public void SetProperties()
+        {
+            var panel1 = new PanelTester("panel1");
+            panel1.Target.BackColor = Color.Blue;
+
+            Assert.AreEqual(Color.Blue, panel1.Target.BackColor);
         }
     }
 }

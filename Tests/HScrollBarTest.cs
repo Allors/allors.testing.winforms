@@ -18,6 +18,12 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Reflection;
+    using System.Windows.Forms;
+    using System.Windows.Forms.VisualStyles;
+
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
 
     using NUnit.Framework;
@@ -33,6 +39,14 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new HScrollBarTester("hScrollBar1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<HScrollBar>(tester.Target);
         }
     }
 }

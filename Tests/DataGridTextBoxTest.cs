@@ -18,6 +18,10 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Windows.Forms;
+
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
 
     using NUnit.Framework;
@@ -33,6 +37,19 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            Assert.Fail();
+
+            var dataGridView1 = new DataGridViewTester("dataGridView1");
+            var row = dataGridView1.Target.Rows[0];
+
+            //var tester = new DataGridTextBoxTester(row, "firstXDataGridViewTextBoxColumn");
+            //Assert.IsNotNull(tester.Target);
+            //Assert.IsInstanceOf<DataGridTextBox>(tester.Target);
         }
     }
 }

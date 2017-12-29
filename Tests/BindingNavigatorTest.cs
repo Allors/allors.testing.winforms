@@ -18,6 +18,11 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.CodeDom;
+    using System.Windows.Forms;
+
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
 
     using NUnit.Framework;
@@ -33,6 +38,42 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new BindingNavigatorTester("bindingNavigator1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<BindingNavigator>(tester.Target);
+        }
+
+        [Test]
+        public void TesterHandlesEvents()
+        {
+            var bindingNavigator = new BindingNavigatorTester("bindingNavigator1");
+            
+            var datagridview = new DataGridViewTester("dataGridView1");
+            Assert.AreEqual(3, datagridview.Target.RowCount);
+
+            Assert.AreEqual("bindingNavigator1", bindingNavigator.Target.Name);
+
+            Assert.AreEqual("of 3", bindingNavigator.Target.CountItem.Text);
+          
+            bindingNavigator.AddNewItem();
+
+            Assert.AreEqual(4, datagridview.Target.RowCount);
+            Assert.AreEqual("of 4", bindingNavigator.Target.CountItem.Text);
+        }
+
+        [Test]
+        public void CustomConstructor()
+        {
+            var button = new ButtonTester("buttonAddBindingNavigator");
+            button.Click();
+
+            var panel = new PanelTester("emptyPanel");
+            Assert.AreEqual(1, panel.Target.Controls.Count);
         }
     }
 }

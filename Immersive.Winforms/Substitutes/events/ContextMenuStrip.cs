@@ -19,6 +19,8 @@
 
 namespace Allors.Immersive.Winforms.Substitutes
 {
+    using System.ComponentModel;
+
     public partial class ContextMenuStrip
     {
     }

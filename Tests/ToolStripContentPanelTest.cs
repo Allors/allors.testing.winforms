@@ -18,6 +18,10 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Windows.Forms;
+
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
 
     using NUnit.Framework;
@@ -33,6 +37,17 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            // ContentPanel is part of the toolStripContainer control.
+            var tester = new ToolStripContainerTester("toolStripContainer1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<ToolStripContainer>(tester.Target);
+
+            Assert.IsNotNull(tester.Target.ContentPanel);
         }
     }
 }

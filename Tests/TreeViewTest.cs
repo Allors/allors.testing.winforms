@@ -41,6 +41,14 @@ namespace Allors.Immersive.Winforms.Tests
         }
 
         [Test]
+        public void FindTesterByName()
+        {
+            var tester = new TreeViewTester("treeView1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<TreeView>(tester.Target);
+        }
+
+        [Test]
         public void SelectChildNode()
         {
             var treeViewTester = new TreeViewTester("treeView1");

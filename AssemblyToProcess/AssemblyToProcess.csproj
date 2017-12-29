@@ -103,6 +103,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />
+    <None Include="Properties\DataSources\AllorsTestWindowsAssembly.A.datasource" />
+    <None Include="Properties\DataSources\AllorsTestWindowsAssembly.B.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -18,6 +18,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Windows.Forms;
+
     using Allors.Immersive.Winforms.Testers;
 
     using AllorsTestWindowsAssembly;
@@ -37,6 +39,15 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new SplitForm();
             this.form.Show();
+        }
+
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new SplitContainerTester("splitContainer1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<SplitContainer>(tester.Target);
         }
 
         [Test]

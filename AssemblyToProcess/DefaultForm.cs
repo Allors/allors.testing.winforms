@@ -19,21 +19,54 @@
 namespace AllorsTestWindowsAssembly
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Windows.Forms;
+    using System.Windows.Forms.VisualStyles;
 
     public partial class DefaultForm : Form
     {
+       
         public DefaultForm()
         {
             InitializeComponent();
+
+            this.contextMenu1.Name = "contextMenu1";
+
+            var dataGrid = new DataGrid();
+            dataGrid.Name = "dataGrid1";
+
+            var statusBar = new StatusBar();
+            statusBar.Name = "statusBar1";
+
+            var toolBar = new ToolBar();
+            toolBar.Name = "toolBar1";
+            
+            var toolStripDropDownMenu = new ToolStripDropDownMenu();
+            toolStripDropDownMenu.Name = "toolStripDropDownMenu1";
+
+            var toolStripDropDown = new ToolStripDropDown();
+            toolStripDropDown.Name = "toolStripDropDown1";
+
+            var toolstripPanel = new ToolStripPanel();
+            toolstripPanel.Name = "toolStripPanel1";
+            toolstripPanel.Dock = DockStyle.Top;
+
             propertyGrid1.SelectedObject = new A();
 
             this.ACollection = new[]
                                    {
-                                       new A() { FirstX = "A1" }
-                                       , new A() { FirstX = "A2" }
-                                       , new A() { FirstX = "A3" }
-                                   };
+                                       new A() { FirstX = "X1", FirstY = "Y1", Second = 11M },
+                                       new A() { FirstX = "X2", FirstY = "Y2", Second = 12M },
+                                       new A() { FirstX = "X3", FirstY = "Y3", Second = 13M }
+                                   }.ToList();
+
+            this.BCollection = new[]
+                                   {
+                                       new B() { FirstX = "B1", FirstY = "B1", Second = 11M },
+                                       new B() { FirstX = "B2", FirstY = "B2", Second = 12M },
+                                       new B() { FirstX = "B3", FirstY = "B3", Second = 13M }
+                                   }.ToList();
 
             this.comboBox1.DisplayMember = "FirstX";
             this.comboBox1.DataSource = this.ACollection;
@@ -46,9 +79,19 @@ namespace AllorsTestWindowsAssembly
 
             this.comboBox1.SelectedIndexChanged += this.comboBox1_SelectedIndexChanged;
             this.comboBox2.SelectedIndexChanged += this.comboBox2_SelectedIndexChanged;
+
+            this.dataGridView1.DataSource = this.bindingSource1;
+            this.bindingSource1.Clear();
+            this.bindingSource1.DataSource = this.ACollection;
+
+            this.bindingSource2.Clear();
+            this.bindingSource2.DataSource = this.BCollection;
+            
         }
 
-        public A[] ACollection { get; set; }
+        public List<B> BCollection { get; set; }
+
+        public List<A> ACollection { get; set; }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -126,6 +169,33 @@ Console.WriteLine(2);
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.textBox2.Text = (string)this.comboBox2.SelectedItem;
+        }
+
+        private void buttonAddTextBox_Click(object sender, EventArgs e)
+        {
+            var textbox = new TextBox();
+            textbox.Name = "textBoxHelloAllors";
+            textbox.Text = @"I'm added to the controls collection";
+            this.Controls.Add(textbox);
+
+            textbox = new TextBox();
+            textbox.Text = @"I'm added to the panels collection";
+            this.panel2.Controls.Add(textbox);
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            this.bindingSource1.ResetBindings(false);
+        }
+
+        private void buttonAddBindingNavigator_Click(object sender, EventArgs e)
+        {
+            var bindingNavigator = new BindingNavigator();
+            bindingNavigator.BindingSource = this.bindingSource2;
+            this.emptyPanel.Controls.Clear();
+            this.emptyPanel.Controls.Add(bindingNavigator);
+            bindingNavigator.Dock = DockStyle.Top;
         }
     }
 }

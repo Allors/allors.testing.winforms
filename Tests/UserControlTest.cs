@@ -23,6 +23,8 @@ namespace Allors.Immersive.Winforms.Tests
 
     using AllorsTestWindowsAssembly;
 
+    using AssemblyToProcess;
+
     using NUnit.Framework;
 
     [TestFixture]
@@ -36,6 +38,14 @@ namespace Allors.Immersive.Winforms.Tests
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new UserControlTester("defaultUserControl1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<DefaultUserControl>(tester.Target);
         }
 
         [Test]

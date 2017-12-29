@@ -19,6 +19,8 @@
 
 namespace Allors.Immersive.Winforms.Substitutes
 {
+    using System.ComponentModel;
+
     using global::Immersive;
     using Allors.Immersive.Winforms.Domain;
 
@@ -28,6 +30,11 @@ namespace Allors.Immersive.Winforms.Substitutes
         private Handle handle;
 
         public ContextMenuStrip()
+        {
+            this.handle = Session.Singleton.Create(this);
+        }
+
+        public ContextMenuStrip(IContainer container)
         {
             this.handle = Session.Singleton.Create(this);
         }

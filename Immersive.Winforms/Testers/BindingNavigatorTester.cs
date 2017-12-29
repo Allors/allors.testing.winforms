@@ -30,5 +30,10 @@ namespace Allors.Immersive.Winforms.Testers
         public BindingNavigatorTester(params string[] names) : base(names)
         {
         }
+
+        public void AddNewItem()
+        {
+            Target.AddNewItem.PerformClick();
+        }
     }
 }

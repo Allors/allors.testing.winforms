@@ -18,6 +18,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System.Windows.Forms;
+
     using Allors.Immersive.Winforms.Testers;
 
     using AllorsTestWindowsAssembly;
@@ -36,6 +38,15 @@ namespace Allors.Immersive.Winforms.Tests
             this.form = new DefaultForm();
             this.form.Show();
         }
+
+        [Test]
+        public void FindTesterByName()
+        {
+            var tester = new MenuItemTester("MenuItem1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<MenuItem>(tester.Target);
+        }
+
 
         [Test]
         public void click()

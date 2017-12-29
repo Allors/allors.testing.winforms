@@ -19,21 +19,35 @@
 
 namespace Allors.Immersive.Winforms.Tests
 {
+    using System;
+    using System.Windows.Forms;
+
+    using Allors.Immersive.Winforms.Testers;
+
     using AllorsTestWindowsAssembly;
 
     using NUnit.Framework;
-
+    
     [TestFixture]
     public class WebBrowserTest : WinformsTest
     {
         private DefaultForm form;
-
+        
         [SetUp]
         public override void SetUp()
         {
             base.SetUp();
             this.form = new DefaultForm();
             this.form.Show();
+        }
+       
+        [Test]
+        public void FindTesterByName()
+        {
+            // WebBrowser requires  [STAThread] attribute, but that makes all tests fail
+            var tester = new WebBrowserTester("webBrowser1");
+            Assert.IsNotNull(tester.Target);
+            Assert.IsInstanceOf<WebBrowser>(tester.Target);
         }
     }
 }

@@ -19,6 +19,8 @@
 
 namespace Allors.Immersive.Winforms.Substitutes
 {
+    using System.Windows.Forms;
+
     using global::Immersive;
     using Allors.Immersive.Winforms.Domain;
 
