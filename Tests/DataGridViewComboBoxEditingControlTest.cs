@@ -36,19 +36,5 @@ namespace Allors.Immersive.Winforms.Tests
             this.form = new DefaultForm();
             this.form.Show();
         }
-
-
-        [Test]
-        public void FindTesterByName()
-        {
-            Assert.Fail();
-
-            var dataGridView1 = new DataGridViewTester("dataGridView1");
-            var row = dataGridView1.Target.Rows[0];
-
-            //var tester = new DataGridViewComboBoxEditingControlTester(row, "firstXDataGridViewTextBoxColumn");
-            //Assert.IsNotNull(tester.Target);
-            //Assert.IsInstanceOf<DataGridTextBox>(tester.Target);
-        }
     }
 }

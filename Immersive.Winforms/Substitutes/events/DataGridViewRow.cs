@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="WebBrowserTest.cs" company="allors bvba">
+// <copyright file="DataGridTextBox.cs" company="allors bvba">
 //   Copyright 2008-2014 Allors bvba.
 //   
 //   This program is free software: you can redistribute it and/or modify
@@ -17,28 +17,9 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Immersive.Winforms.Tests
+namespace Allors.Immersive.Winforms.Substitutes
 {
-    using System;
-    using System.Windows.Forms;
-
-    using Allors.Immersive.Winforms.Testers;
-
-    using AllorsTestWindowsAssembly;
-
-    using NUnit.Framework;
-    
-    [TestFixture]
-    public class WebBrowserTest : WinformsTest
+    public partial class DataGridTextBox
     {
-        private DefaultForm form;
-        
-        [SetUp]
-        public override void SetUp()
-        {
-            base.SetUp();
-            this.form = new DefaultForm();
-            this.form.Show();
-        }
     }
 }

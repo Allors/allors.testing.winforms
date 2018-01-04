@@ -42,11 +42,11 @@ namespace Allors.Immersive.Winforms.Tests
         [Test]
         public void FindTesterByName()
         {
-            // context menu associated with a usercontrol
+            //TODO: immerse constructor new ContextMenuStrip(IContainer container)
+            // Drag a new ContextMenuStrip onto the designer and check designer code.
             var tester = new ContextMenuStripTester("contextMenuStrip1");
             Assert.IsNotNull(tester.Target);
             Assert.IsInstanceOf<ContextMenuStrip>(tester.Target);
         }
-
     }
 }

@@ -52,6 +52,27 @@ namespace Allors.Immersive.Winforms.Tests
         }
 
         [Test]
+        public void FindRow()
+        {
+            var tester = new DataGridViewTester("dataGridView1");
+
+            var row = tester.FindRow(v => v.Index == 0);
+            Assert.IsNotNull(row);
+            Assert.IsInstanceOf<DataGridViewRow>(row);
+        }
+
+        [Test]
+        public void FindRows()
+        {
+            var tester = new DataGridViewTester("dataGridView1");
+
+            var rows = tester.FindRows(v => v.Index > 0 && v.Index < 5);
+            Assert.IsNotNull(rows);
+            Assert.AreEqual(4, rows.Length);
+        }
+
+
+        [Test]
         public void GetRowCount()
         {
             var dataGridView = new DataGridViewTester(GridName);

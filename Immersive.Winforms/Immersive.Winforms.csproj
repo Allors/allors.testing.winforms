@@ -81,6 +81,7 @@
     <Compile Include="Substitutes\DataGridTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Substitutes\DataGridViewRow.cs" />
     <Compile Include="Substitutes\DataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -118,6 +119,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Substitutes\events\DataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Substitutes\events\DataGridViewRow.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Substitutes\events\DataGridTextBox.cs">
@@ -420,6 +424,7 @@
     <Compile Include="Testers\DataGridTester.cs" />
     <Compile Include="Testers\DataGridTextBoxTester.cs" />
     <Compile Include="Testers\DataGridViewComboBoxEditingControlTester.cs" />
+    <Compile Include="Testers\DataGridViewRowTester.cs" />
     <Compile Include="Testers\DataGridViewTester.cs" />
     <Compile Include="Testers\DataGridViewTextBoxEditingControlTester.cs" />
     <Compile Include="Testers\DateTimePickerTester.cs" />

@@ -18,9 +18,14 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Allors.Immersive.Winforms.Testers
 {
-    using Allors.Immersive.Winforms.Domain;
-    using Allors.Immersive.Winforms.Substitutes;
+    using System;
+    using System.Linq;
+    using System.Windows.Forms;
 
+    using Allors.Immersive.Winforms.Domain;
+
+    using DataGridView = Allors.Immersive.Winforms.Substitutes.DataGridView;
+    
     public class DataGridViewTester : Tester<DataGridView>
     {
         public DataGridViewTester(Handle handle) : base(handle)
@@ -29,6 +34,16 @@ namespace Allors.Immersive.Winforms.Testers
 
         public DataGridViewTester(params string[] names) : base(names)
         {
+        }
+
+        public DataGridViewRow FindRow(Func<DataGridViewRow, bool> predicate)
+        {
+            return this.Target.Rows.Cast<DataGridViewRow>().FirstOrDefault(predicate);
+        }
+
+        public DataGridViewRow[] FindRows(Func<DataGridViewRow, bool> predicate)
+        {
+            return this.Target.Rows.Cast<DataGridViewRow>().Where(predicate).ToArray();
         }
     }
 }

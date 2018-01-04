@@ -34,7 +34,7 @@ namespace Allors.Immersive.Winforms.Substitutes
             this.handle = Session.Singleton.Create(this);
         }
 
-        public ContextMenuStrip(IContainer container)
+        public ContextMenuStrip(IContainer container) : base(container)
         {
             this.handle = Session.Singleton.Create(this);
         }

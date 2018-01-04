@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="WebBrowserTest.cs" company="allors bvba">
+// <copyright file="DataGridView.cs" company="allors bvba">
 //   Copyright 2008-2014 Allors bvba.
 //   
 //   This program is free software: you can redistribute it and/or modify
@@ -17,28 +17,31 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Allors.Immersive.Winforms.Tests
+namespace Allors.Immersive.Winforms.Substitutes
 {
-    using System;
-    using System.Windows.Forms;
+    using global::Immersive;
+    using Allors.Immersive.Winforms.Domain;
 
-    using Allors.Immersive.Winforms.Testers;
-
-    using AllorsTestWindowsAssembly;
-
-    using NUnit.Framework;
-    
-    [TestFixture]
-    public class WebBrowserTest : WinformsTest
+    [SubstituteClass]
+    public partial class DataGridViewRow : System.Windows.Forms.DataGridViewRow, ISubstitute
     {
-        private DefaultForm form;
-        
-        [SetUp]
-        public override void SetUp()
+        private Handle handle;
+
+        public DataGridViewRow()
         {
-            base.SetUp();
-            this.form = new DefaultForm();
-            this.form.Show();
+            this.handle = Session.Singleton.Create(this);
         }
+
+        #region Target Members
+
+        public string SubstituteName
+        {
+            get
+            {
+                return $"{this.DataGridView.Name}_{this.Index}";
+            }
+        }
+
+        #endregion
     }
 }
