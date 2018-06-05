@@ -1,4 +1,4 @@
-@SET PATH=%PATH%;packages\NuGet.CommandLine.4.4.1\tools
+@SET PATH=%PATH%;packages\NuGet.CommandLine.4.6.2\tools
 
 @rmdir nugets /s /q
 
